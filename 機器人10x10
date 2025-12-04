@@ -1,0 +1,10 @@
+from robot_lib import World, AnimatedRobot
+w = World(10, 10)
+r = AnimatedRobot(w, 1, 1)
+
+def round():
+    for i in range(4):
+        r.move(9)
+        r.turn_left()
+
+round()
