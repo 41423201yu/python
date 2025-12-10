@@ -1,0 +1,46 @@
+# 定義右轉函式
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+# 第 1 條邊：走 10 步
+for i in range(10):
+    if front_is_clear() and not object_here():
+        move()
+turn_left()
+
+# 第 2 條邊：走 5 步
+for i in range(5):
+    if front_is_clear() and not object_here():
+        move()
+turn_left()
+
+# 第 3 條邊：走 5 步
+for i in range(5):
+    if front_is_clear() and not object_here():
+        move()
+turn_right()
+
+# 第 4 條邊：走 5 步
+for i in range(5):
+    if front_is_clear() and not object_here():
+        move()
+turn_left()
+
+# 第 5 條邊：走 5 步
+for i in range(5):
+    if front_is_clear() and not object_here():
+        move()
+turn_left()
+
+# 第 6 條邊：走 10 步
+for i in range(10):
+    if front_is_clear() and not object_here():
+        move()
+turn_left()
+
+# 第 7 條邊：走 3 步
+for i in range(3):
+    if front_is_clear() and not object_here():
+        move()
