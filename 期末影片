@@ -1,1 +1,9 @@
-https://youtu.be/2OkQmi7yaT0
+<div class="ratio ratio-16x9 mx-auto mb-4" style="max-width: 800px;">
+  <iframe 
+    src="https://www.youtube.com/embed/2OkQmi7yaT0" 
+    title="期末影片" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
