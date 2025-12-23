@@ -2,10 +2,89 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>Web Course</title>
+  <title>Web Course｜課程網站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 簡單內建 CSS（不用另外放檔案） -->
+  <style>
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 14px;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>我的課程網站</h1>
-  <p>GitHub Pages 已成功啟用 🎉</p>
+
+  <header>
+    <h1>我的課程網站</h1>
+    <p>Web Course / GitHub Pages</p>
+  </header>
+
+  <main>
+    <h2>📌 課程說明</h2>
+    <p>
+      這是使用 <strong>GitHub Pages</strong> 建立的靜態課程網站，
+      主要用來記錄 Web 課程的學習內容與作業成果。
+    </p>
+
+    <h2>📂 作業連結</h2>
+    <ul>
+      <li><a href="#">Week 1：環境建置</a></li>
+      <li><a href="#">Week 2：Git 與 GitHub</a></li>
+      <li><a href="#">Week 3：HTML 基礎</a></li>
+      <li><a href="#">Week 4：CSS 排版</a></li>
+    </ul>
+
+    <h2>ℹ️ 使用說明</h2>
+    <ul>
+      <li>本網站為 <strong>純靜態 HTML</strong></li>
+      <li>不使用 Python / Flask / Jinja</li>
+      <li>可直接部署在 GitHub Pages</li>
+    </ul>
+
+    <p>🎉 GitHub Pages 已成功啟用</p>
+  </main>
+
+  <footer>
+    © 2025 41423201yu ｜ Web Course
+  </footer>
+
 </body>
 </html>
