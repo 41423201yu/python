@@ -1,90 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>Web Course｜課程網站</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 簡單內建 CSS（不用另外放檔案） -->
-  <style>
-    body {
-      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      margin-top: 0;
-    }
-    ul {
-      line-height: 1.8;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-    a {
-      color: #3498db;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Course｜課程網站</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
+    <!-- 導航列 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Web Course</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="topics.html">Topics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="brython.html">Brython</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <header>
-    <h1>我的課程網站</h1>
-    <p>Web Course / GitHub Pages</p>
-  </header>
+    <div class="container my-5">
+        <h1 class="text-center">Web Course｜課程網站</h1>
+        <p class="text-center lead">我的課程網站</p>
+        <hr>
+        <p>課程說明: 這是使用 GitHub Pages 建立的靜態課程網站，主要用來記錄 Web 課程的學習內容與作業成果。</p>
+        <h3>作業連結</h3>
+        <ul>
+            <!-- 這裡未來加你的作業連結 -->
+            <li><a href="topics.html">週次主題與心得</a></li>
+        </ul>
+        <p>GitHub Pages 已成功啟用 ✨</p>
+    </div>
 
-  <main>
-    <h2>📌 課程說明</h2>
-    <p>
-      這是使用 <strong>GitHub Pages</strong> 建立的靜態課程網站，
-      主要用來記錄 Web 課程的學習內容與作業成果。
-    </p>
-
-    <h2>📂 作業連結</h2>
-    <ul>
-      <li><a href="#">Week 1：環境建置</a></li>
-      <li><a href="#">Week 2：Git 與 GitHub</a></li>
-      <li><a href="#">Week 3：HTML 基礎</a></li>
-      <li><a href="#">Week 4：CSS 排版</a></li>
-    </ul>
-
-    <h2>ℹ️ 使用說明</h2>
-    <ul>
-      <li>本網站為 <strong>純靜態 HTML</strong></li>
-      <li>不使用 Python / Flask / Jinja</li>
-      <li>可直接部署在 GitHub Pages</li>
-    </ul>
-
-    <p>🎉 GitHub Pages 已成功啟用</p>
-  </main>
-
-  <footer>
-    © 2025 41423201yu ｜ Web Course
-  </footer>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
