@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>w17 - 課程反思影片｜41423201</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">41423201 的 Web Course</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="topics.html">Topics</a></li>
+                    <li><a class="nav-link" href="assignments.html">Assignments</a></li>
+                    <li><a class="nav-link" href="cp_demo.html">CP Demo</a></li>
+                    <li><a class="nav-link active" href="w17.html">w17 影片</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center">w17 - 計算機程式課程學到了什麼？</h1>
+        <p class="text-center lead">41423201 個人 Youtube 影片簡報</p>
+        <hr class="my-5">
+
+        <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+            <!-- 直接嵌入 YouTube 影片 -->
+            <iframe src="https://www.youtube.com/embed/2OkQmi7yaT0" 
+                    title="41423201 課程反思影片" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="mt-5">
+            <h4>影片說明</h4>
+            <p>這是我個人的課程反思影片，總結這學期在計算機程式課程中學到的知識與成長：</p>
+            <ul>
+                <li>GitHub Pages 靜態網站搭建與維護</li>
+                <li>Brython 在瀏覽器執行 Python</li>
+                <li>機器人模擬與程式應用</li>
+                <li>版本控制與學習心得記錄的重要性</li>
+            </ul>
+            <p>感謝這門課，讓我從零開始建立自己的個人學習網站！</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
