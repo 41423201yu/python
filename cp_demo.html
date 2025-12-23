@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Demo｜41423201 計算機程式示範</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>
+</head>
+<body onload="brython()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">41423201 的 Web Course</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="topics.html">Topics</a></li>
+                    <li><a class="nav-link" href="assignments.html">Assignments</a></li>
+                    <li><a class="nav-link active" href="cp_demo.html">CP Demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center">CP Demo - 我的計算機程式示範</h1>
+        <p class="text-center lead">41423201 個人作品，使用 Brython 在瀏覽器直接執行 Python</p>
+        <hr>
+
+        <h3>1. Brython 畫圖範例（圓圈與顏色）</h3>
+        <canvas id="canvas1" width="500" height="400" style="border:2px solid #333; background:#f8f9fa;"></canvas>
+
+        <h3 class="mt-5">2. 簡單機器人移動模擬（w10/w14 練習）</h3>
+        <p>灰色方塊機器人在地面上左右移動，模擬基本作動。</p>
+        <canvas id="robot" width="600" height="300" style="border:2px solid #333; background:#e0f7fa;"></canvas>
+
+        <h3 class="mt-5">3. 互動按鈕範例</h3>
+        <button class="btn btn-success btn-lg" onclick="run_demo()">點我執行 Python 互動</button>
+        <div id="output" class="mt-3 alert alert-info"></div>
+    </div>
+
+    <script type="text/python">
+    from browser import document, timer, alert
+    from math import pi
+
+    # 範例1：畫多個圓圈
+    canvas1 = document["canvas1"]
+    ctx1 = canvas1.getContext("2d")
+    ctx1.fillStyle = "#fff3e0"
+    ctx1.fillRect(0, 0, 500, 400)
+    for i in range(1, 6):
+        ctx1.strokeStyle = f"hsl({i*60}, 70%, 50%)"
+        ctx1.lineWidth = 8
+        ctx1.beginPath()
+        ctx1.arc(250, 200, i*30, 0, 2*pi)
+        ctx1.stroke()
+
+    # 範例2：機器人移動動畫
+    robot_canvas = document["robot"]
+    ctx_robot = robot_canvas.getContext("2d")
+    x_pos = 50
+    direction = 1
+
+    def move_robot():
+        global x_pos, direction
+        ctx_robot.clearRect(0, 0, 600, 300)
+        # 地面
+        ctx_robot.fillStyle = "#8bc34a"
+        ctx_robot.fillRect(0, 250, 600, 50)
+        # 機器人身體
+        ctx_robot.fillStyle = "#607d8b"
+        ctx_robot.fillRect(x_pos, 180, 100, 70)
+        # 輪子
+        ctx_robot.fillStyle = "#212121"
+        ctx_robot.fillRect(x_pos+10, 240, 30, 20)
+        ctx_robot.fillRect(x_pos+60, 240, 30, 20)
+        # 移動
+        x_pos += direction * 8
+        if x_pos > 500 or x_pos < 0:
+            direction *= -1
+
+    timer.set_interval(move_robot, 50)
+
+    # 範例3：按鈕互動
+    def run_demo(ev):
+        alert("成功！這是 41423201 用 Brython 執行的 Python 程式～")
+        document["output"].text = "執行完畢！時間：現在是瀏覽器直接跑的 Python。"
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
